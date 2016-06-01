@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 
-MAINTAINER Lamberto Diwa <lamberto.diwa@dimensiondata.com>
+MAINTAINER Lamberto Diwa <lambertodiwajr@gmail.com>
 
 # Prevent dpkg errors
 ENV TERM=xterm-256color
@@ -23,3 +23,5 @@ RUN virtualenv /appenv && \
 ADD scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
+
+LABEL application=todobackend
