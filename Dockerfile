@@ -24,4 +24,5 @@ ADD scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 
+# Add label to be used when doing `make clean` command
 LABEL application=todobackend
